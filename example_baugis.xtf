@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
+  <HEADERSECTION SENDER="ili2gpkg-5.1.0-58fc980cc6639b2c16a3cff8a0fa19ef1484b11c" VERSION="2.3">
+    <MODELS>
+      <MODEL NAME="SO_ARP_Baugis_20190612" VERSION="2019-06-12" URI="https://agi.so.ch"/>
+    </MODELS>
+  </HEADERSECTION>
+  <DATASECTION>
+    <SO_ARP_Baugis_20190612.Baugis BID="SO_ARP_Baugis_20190612.Baugis">
+      <SO_ARP_Baugis_20190612.Baugis.Geschaeft TID="E888E057-B203-4488-866F-0EA1D365AFEF">
+        <SobauID_sprechend>Neubau Zürihaus</SobauID_sprechend>
+        <SobauID_system OID="08DE6290-A2EF-4044-9C49-3B9A1F280610"/>
+        <Art_Text>foo</Art_Text>
+        <Art_Code>1</Art_Code>
+        <Vorhaben>Gaga</Vorhaben>
+        <Entscheid_Text>Ja</Entscheid_Text>
+        <Entscheid_Code>1</Entscheid_Code>
+        <Sistiert_Text>nein</Sistiert_Text>
+        <Sistiert_Code>2</Sistiert_Code>
+        <Sobau_Link>https://agi.so.ch</Sobau_Link>
+        <Projektleiter_Name>Lisa Liegenschaft</Projektleiter_Name>
+        <Geometrie>
+          <COORD>
+            <C1>2607892.464</C1>
+            <C2>1228257.773</C2>
+          </COORD>
+        </Geometrie>
+      </SO_ARP_Baugis_20190612.Baugis.Geschaeft>
+    </SO_ARP_Baugis_20190612.Baugis>
+  </DATASECTION>
+</TRANSFER>

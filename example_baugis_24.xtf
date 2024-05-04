@@ -1,12 +1,4 @@
-import stomp
-
-# Create a connection to ActiveMQ
-conn = stomp.Connection12([('localhost', 61613)], auto_content_length=False) #https://github.com/jasonrbriggs/stomp.py/issues/216
-conn.connect(login='admin', passcode='admin', wait=True)
-
-# Send a message to a specific destination (queue)
-destination = 'ch/so/dsbjd/ebau'
-message = '''<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ili:transfer xmlns:ili="http://www.interlis.ch/xtf/2.4/INTERLIS" xmlns:geom="http://www.interlis.ch/geometry/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SO_ARP_Baugis_20190612="http://www.interlis.ch/xtf/2.4/SO_ARP_Baugis_20190612">
   <ili:headersection>
     <ili:models>
@@ -18,7 +10,7 @@ message = '''<?xml version="1.0" encoding="UTF-8"?>
     <SO_ARP_Baugis_20190612:Baugis ili:bid="SO_ARP_Baugis_20190612.Baugis">
       <SO_ARP_Baugis_20190612:Geschaeft ili:tid="E888E057-B203-4488-866F-0EA1D365AFEF">
         <SO_ARP_Baugis_20190612:SobauID_sprechend>Neubau Zürihaus</SO_ARP_Baugis_20190612:SobauID_sprechend>
-        <SO_ARP_Baugis_20190612:SobauID_system>08DE6290-A2EF-4044-9C49-3B9A1F280610</SO_ARP_Baugis_20190612:SobauID_system>
+        <SO_ARP_Baugis_20190612:SobauID_system>XXXXX08DE6290-A2EF-4044-9C49-3B9A1F280610</SO_ARP_Baugis_20190612:SobauID_system>
         <SO_ARP_Baugis_20190612:Art_Text>foo</SO_ARP_Baugis_20190612:Art_Text>
         <SO_ARP_Baugis_20190612:Art_Code>1</SO_ARP_Baugis_20190612:Art_Code>
         <SO_ARP_Baugis_20190612:Vorhaben>Gaga</SO_ARP_Baugis_20190612:Vorhaben>
@@ -38,9 +30,3 @@ message = '''<?xml version="1.0" encoding="UTF-8"?>
     </SO_ARP_Baugis_20190612:Baugis>
   </ili:datasection>
 </ili:transfer>
-'''
-
-conn.send(body=message, destination=destination, headers={'persistent' :'true'})
-
-# Disconnect from ActiveMQ
-conn.disconnect()
