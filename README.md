@@ -56,3 +56,13 @@ java -jar /Users/stefan/apps/ili2gpkg-5.1.0/ili2gpkg-5.1.0.jar --dbfile sobau.gp
 ```
 java -jar /Users/stefan/apps/ili2gpkg-5.1.0/ili2gpkg-5.1.0.jar --dbfile sobau.gpkg --models SO_ARP_Baugis_20190612 --export example_baugis.xtf
 ```
+
+ili24:
+
+```
+java -jar /Users/stefan/apps/ili2gpkg-5.1.0/ili2gpkg-5.1.0.jar --dbfile sobau_24.gpkg --nameByTopic --defaultSrsCode 2056 --models SO_ARP_Baugis_20190612 --modeldir "/Users/stefan/Downloads/;https://models.geo.admin.ch" --schemaimport
+```
+
+```
+java -jar /Users/stefan/apps/ili2gpkg-5.1.0/ili2gpkg-5.1.0.jar --dbfile sobau_24.gpkg  --models SO_ARP_Baugis_20190612 --modeldir "/Users/stefan/Downloads/;https://models.geo.admin.ch" --export example_baugis_24.xtf
+```
